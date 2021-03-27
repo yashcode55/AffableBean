@@ -1,0 +1,621 @@
+
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22 Oct, 2020, 3:16:08 PM
+    Author     : yasha
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 850px;
+    text-align: center;
+    margin: 20px auto;
+    color: #444;
+}
+
+hr {
+    border: 0;
+    background-color: #333;
+    height: 1px;
+}
+
+table {
+    margin: 0 20px;
+    border-spacing: 0;
+    text-align: center;
+    border: solid 1px #f5eabe;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+a:hover { text-decoration: none }
+
+a:visited { color: inherit }
+
+img { border: none }
+
+input, select { margin: 5px }
+
+li { margin: 10px 0 }
+
+label { line-height: 30px }
+
+label.error {
+    font-size: smaller;
+    line-height: 20px;
+    font-style: italic;
+}
+
+
+/* general styles */
+#main { background: #f7f7e9 }
+
+#singleColumn {
+    margin: 20px 30px;
+    text-align: left;
+}
+
+.lightBlue { background-color: #edf8f7 }
+
+.white { background-color: #fff }
+
+.bubble {
+    font-weight: bold;
+    background-color: #f5eabe;
+    padding: 5px;
+    color: inherit;
+    display: inline;
+    border-radius: 4px;
+}
+
+.hMargin { margin: 0 30px }
+
+.smallText { font-size: small }
+
+.reallySmallText { font-size: xx-small }
+
+.header {
+    background-color: #c3e3e0;
+    height: 30px;
+}
+
+.error {
+    color: #c00;
+    font-style: italic;
+}
+
+.tableHeading {
+    font-weight: bold;
+    background-color: #edf8f7;
+}
+
+
+/* styles for elements contained in the header, i.e.,
+   shopping cart widget, language toggle, and logo */
+#header {
+    width: 850px;
+    height: 250px;
+    background: url(../img/stalk.png) no-repeat 28px 28px;
+}
+
+#logo {
+    float: left;
+    margin-left: 30px;
+    margin-top: -20px;
+}
+
+#logoText {
+    float: left;
+    margin: 20px 0 0 70px;
+    /* font styles apply to text within img alt attribute */
+    font-family: 'American Typewriter', Courier, monospace;
+    font-size: 50px;
+    color: #333;
+}
+
+#widgetBar {
+    height: 50px;
+    width: 850px;
+    float: right;
+}
+
+#cart {
+    position: absolute;
+    margin: 5px 0 0 2px;
+}
+
+.horizontalMargin {
+    margin-left: 28px;
+    margin-right: 5px
+}
+
+#viewCart {
+    text-align: left;
+    width: 210px;
+}
+
+.headerWidget {
+    width: 194px;
+    margin: 20px 0;
+    font-size: small;
+    float: right;
+    line-height: 25px;
+}
+
+
+/* footer styles */
+#footer {
+    height: 60px;
+    width: 350px;
+    clear: left;
+}
+
+#footerText { margin-top: 5px }
+
+#footerDivider {
+    margin: 0 25px;
+    width: 300px;
+}
+
+
+/* index page styles */
+#indexLeftColumn {
+    text-align: left;
+    height: 400px;
+    width: 350px;
+    float: left;
+}
+
+#indexRightColumn {
+    text-align: left;
+    height: 400px;
+    width: 500px;
+    float: left;
+}
+
+#welcomeText {
+    margin: 30px 5px 0 30px;
+    line-height: 1.4em;
+}
+
+.categoryBox {
+    height: 176px;
+    width: 212px;
+    margin: 21px 14px 6px;
+    float: inherit;
+}
+
+/* Safari - disables underline for category boxes on index page */
+.categoryBox a { text-decoration: none }
+
+.categoryLabel {
+    position: absolute;
+    background-color: #fff;
+    opacity: 0.7;
+    height: 40px;
+    width: 210px;
+    margin: 2px;
+}
+
+.categoryLabelText {
+    position: absolute;
+    line-height: 150%;
+    font-size: x-large;
+    margin: 3px 10px;
+}
+
+.categoryImage {
+    padding: 1px;
+    border:solid 1px #555;
+}
+
+
+/* category page styles */
+#categoryLeftColumn {
+    width: 185px;
+    float: left;
+    margin-top: 25px;
+    padding-left: 15px;
+}
+
+#categoryRightColumn {
+    margin-top: 10px;
+    width: 650px;
+    float: left;
+}
+
+.categoryButton {
+    margin: 15px 22px;
+    padding: 13px;
+    display: block;
+    background-color: #d3ede8;
+    border-radius: 4px;
+}
+
+#selectedCategory {
+    background-color: #b2d2d2;
+    margin-left: 10px;
+    width: 139px;
+}
+
+#categoryTitle {
+    margin-top: -40px;
+    right: 385px;
+    font-size: x-large;
+    position: absolute;
+    background-color: #f5eabe;
+    padding: 7px;
+    border-radius: 4px;
+}
+
+.categoryText {
+    line-height: 25px;
+    font-size: x-large;
+}
+
+#productTable {
+    width: 600px;
+
+    /* styles to collaborate with rounded categoryLabel */
+    position: relative;
+    z-index: 1;
+}
+
+#productTable tr { height: 90px }
+
+#productTable td { width: 145px }
+
+
+/* cart page styles */
+#actionBar {
+    margin: 30px;
+    width: 750px;
+    text-align: center;
+}
+
+#subtotal { margin: 40px 0 20px 430px }
+
+#cartTable { width: 750px }
+
+#cartTable td {
+    width: 145px;
+    height: 90px;
+}
+
+
+/* checkout page styles */
+#checkoutTable {
+    width: 405px;
+    padding: 10px;
+    background-color: #f5eabe;
+    float: left;
+    border-radius: 4px;
+}
+
+#checkoutTable td {
+    vertical-align: top;
+    text-align: right;
+    margin: 5px;
+}
+
+.inputField { width: 190px }
+
+#infoBox { padding: 10px 25px 0 460px }
+
+#priceBox {
+    padding: 10px;
+    border: 1px solid #c3e3e0;
+    background-color: #c3e3e0;
+    border-radius: 4px;
+}
+
+#priceBox td {
+    text-align: right;
+    padding: 5px;
+}
+
+.checkoutPriceColumn {
+    width: 80px;
+    font-weight: bold;
+}
+
+.total { border-top: 1px solid #444 }
+
+.indent { margin-left: 6em }
+
+
+/* confirmation page styles */
+#confirmationText {
+    margin: 0 20px 20px;
+    padding: 10px;
+    background-color: #f5eabe;
+    float: left;
+    border-radius: 4px;
+}
+
+.summaryColumn {
+    margin-top: 15px;
+    width: 50%;
+    float: left;
+}
+
+.detailsTable { text-align: left }
+
+.detailsTable th { padding: 5px 10px }
+
+.detailsTable td {
+    padding: 5px 10px 5px 20px;
+    font-size: small;
+    font-family: "Courier New", courier, monospace;
+}
+
+#orderSummaryTable { width: 100% }
+
+#deliveryAddressTable {
+    width: 70%;
+    margin-left: 15%;
+}
+
+#deliveryAddressTable td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.quantityColumn {
+    text-align: center;
+    width: 62px;
+}
+
+.confirmationPriceColumn {
+    width: 90px;
+    font-weight: normal;
+}
+
+#deliverySurchargeCellLeft {
+    text-align: right;
+    padding: 0;
+}
+
+#deliverySurchargeCellRight { padding: 0 20px }
+
+#totalCellLeft {
+    text-align: right;
+    padding: 0;
+}
+
+#totalCellRight { padding: 0 20px }
+
+#dateProcessedRow { padding: 2px 0 10px 20px }
+
+
+/* admin styles */
+#adminLogo {
+    float:left;
+    margin-left: 30px;
+    margin-top: -20px;
+}
+
+#loginBox {
+    width: 300px;
+    margin: 0 auto;
+    border: solid 1px #f5eabe;
+    background-color: #f5eabe;
+    border-radius: 4px;
+}
+
+#adminMenu {
+    float: left;
+    width: 180px;
+    margin: 25px 5px 0 30px;
+    border: solid 1px #f5eabe;
+    background-color: #f5eabe;
+    border-radius: 4px;
+}
+
+#adminMenu p { margin-left: 15px }
+
+#adminTable {
+    width: 580px;
+    float: left;
+    background-color: #edf8f7;
+}
+
+.alignLeft { text-align: left }
+
+.selectedRow {
+    background-color: #c3e3e0;
+    cursor: pointer;
+}
+
+.noDecoration { text-decoration: none }
+
+.rigidWidth { width:200px }
+
+.embedded {
+    margin: 0;
+    border: none;
+}
+
+/*from here i am goin to add new css style*/ 
+/*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@400;700&display=swap');*/
+
+html {
+    height: 100%;
+    min-height:800px;
+}
+body {
+    /*background: url('https://i.pinimg.com/originals/48/79/86/487986c17560a8ed1afdc55e480e5be2.png');
+    background-size:cover;
+    background-repeat:no-repeat;*/
+    /*text-align: center;*/
+    font-family: 'Noto Sans', sans-serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+h1{
+    font-weight:400;
+    padding-top:0;
+    margin-top:0;
+    font-family: 'Roboto Slab', serif;
+}
+
+#svg_form_time {
+    height: 15px;
+    max-width: 80%;
+    margin: 40px auto 20px;
+    display: block;
+}
+
+#svg_form_time circle,
+#svg_form_time rect {
+    fill: white;
+}
+
+/*.button {
+    background: rgb(237, 40, 70);
+    border-radius: 5px;
+    padding: 15px 25px;
+    display: inline-block;
+    margin: 10px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    box-shadow:0px 2px 5px rgb(0,0,0,0.5);
+}*/
+
+.disabled {
+    display:none;
+}
+
+section {
+    padding: 25px 50px;
+    /*max-width: 300px;*/
+    margin: 30px auto;
+    background:white;
+    background:rgba(255,255,255,0.9);
+    backdrop-filter:blur(10px);
+    box-shadow:0px 2px 10px rgba(0,0,0,0.3);
+    border-radius:5px;
+    transition:transform 0.2s ease-in-out;
+}
+
+
+/*input {
+    width: 100%;
+    margin: 7px 0px;
+    display: inline-block;
+    padding: 12px 25px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    font-size: 1em;
+    font-family:inherit;
+    background:white;
+}*/
+
+p{
+    text-align:justify;
+    margin-top:0;
+}
+.btn-pink{
+    background-color: #ffb9cc;
+    border-width: 8px;
+    border-color: #ffb9c;
+    border-radius:100px;
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700!important;
+    text-transform: uppercase!important;
+    box-shadow: 0px 12px 18px -6px rgba(255,185,204,0.6);
+}
+.btn-pink:hover{
+    background-color: white;
+    color: #ffb9cc;
+    transition: color 300ms ease 0ms,background-color 300ms ease 0ms,border 300ms ease 0ms;
+}
+.btn-blue{
+    color: #88d4f2!important;
+    background-color: white;
+    border-width: 6px!important;
+    border-color: rgba(255,255,255,0);
+    border-radius: 86px;
+    font-size: 14px;
+    font-family: 'Nunito',Helvetica,Arial,Lucida,sans-serif!important;
+    font-weight: 700!important;
+    text-transform: uppercase!important;
+    transition: color 300ms ease 0ms,background-color 300ms ease 0ms,border 300ms ease 0ms;
+}
+.btn-blue:hover{
+    color: #ffffff!important;
+    border-width: 6px!important;
+    border-color: #88d4f2!important;
+    background-image: initial;
+    background-color: #88d4f2;
+}
+input{
+    font-size: 14px!important;
+}
+.fs-14{
+    font-size: 14px;
+}
+
+.custom-file-label-new{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.custom-file-label-new > i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: block;
+    height: calc(1.5em + .75rem);
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #e9ecef;
+    border-left: inherit;
+    border-radius: 0 .25rem .25rem 0;
+}
+.cursorOnHover{
+    cursor: pointer;
+}
+.customIcon{
+    font-weight: 800;
+    font-family: cursive;
+    border: 3px solid hotpink!important;
+    border-radius: 100px;
+    color: hotpink!important;
+    padding: 4px 11px;
+}
+
+
+
+/*from here boot starp*/
